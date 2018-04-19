@@ -21,12 +21,12 @@ public class JFrameClient {
 			myQueue = mySess.createQueue("clase");
 			MessageProducer myMsgProducer = mySess.createProducer(myQueue);
 			// Creamos mensaje a enviar
-            TextMessage myTextMsg = mySess.createTextMessage();
-            myTextMsg.setText("Hola clase");
-            // Productor envía el mensaje a su sesión
-            myMsgProducer.send(myTextMsg);
+           		TextMessage myTextMsg = mySess.createTextMessage();
+            		myTextMsg.setText("Hola clase");
+            		// Productor envÃ­a el mensaje a su sesiÃ³n
+            		myMsgProducer.send(myTextMsg);
             
-            // Creamos el Consumidor
+		    	// Creamos el Consumidor
 			MessageConsumer myMsgConsumer = mySess.createConsumer(myQueue);
 			myConn.start();
 			
